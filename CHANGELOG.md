@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/antrema/github_actions-001-003/compare/v1.0.0...v1.0.1) (2024-11-04)
+
+
+### Bug Fixes
+
+* problem on definition ([47167e6](https://github.com/antrema/github_actions-001-003/commit/47167e6796805dbcde5231e932264fffa3e7ab63))
+
 ## 1.0.0 (2024-07-27)
 
 
