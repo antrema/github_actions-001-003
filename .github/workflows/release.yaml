@@ -60,7 +60,7 @@ jobs:
       # * Optionally downloading and caching a version of Go by version and adding to PATH.
       # * Registering problem matchers for error output.
       - name: Set up Go
-        uses: actions/setup-go@v5.1.0
+        uses: actions/setup-go@v5.2.0
         with:
           go-version: "1.22.x"
       # GoReleaser Action runs goreleaser.
