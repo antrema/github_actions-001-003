@@ -35,11 +35,11 @@ jobs:
       tag_name: ${{ steps.release-please.outputs.tag_name }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       # Automate releases with Conventional Commit Messages.
       - name: Release Please
         id: release-please
-        uses: googleapis/release-please-action@v4.1.4
+        uses: googleapis/release-please-action@d1a8f221d7723166f48a584aebba00ef3f6febec # v4.1.4
         with:
           token: ${{ secrets.GHCR_TOKEN }}
           release-type: simple
@@ -53,19 +53,19 @@ jobs:
     if: ${{ needs.release-please.outputs.releases_created == 'true' || startsWith(github.ref, 'refs/tags/') }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
           fetch-depth: 0
       # This action sets up a go environment for use in actions by:
       # * Optionally downloading and caching a version of Go by version and adding to PATH.
       # * Registering problem matchers for error output.
       - name: Set up Go
-        uses: actions/setup-go@v5.3.0
+        uses: actions/setup-go@f111f3307d8850f501ac008e886eec1fd1932a34 # v5.3.0
         with:
           go-version: "1.22.x"
       # GoReleaser Action runs goreleaser.
       - name: Run GoReleaser
-        uses: goreleaser/goreleaser-action@v6.2.1
+        uses: goreleaser/goreleaser-action@90a3faa9d0182683851fbfa97ca1a2cb983bfca3 # v6.2.1
         with:
           version: latest
           args: release
