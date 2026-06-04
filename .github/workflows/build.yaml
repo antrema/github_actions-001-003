@@ -44,7 +44,7 @@ jobs:
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
       # Installs QEMU static binaries.
       - name: Set up QEMU
-        uses: docker/setup-qemu-action@ce360397dd3f832beb865e1373c09c0e9f86d70a # v4.0.0
+        uses: docker/setup-qemu-action@06116385d9baf250c9f4dcb4858b16962ea869c3 # v4.1.0
       # Creates and boots a builder that can be used in the following steps.
       # (Buildx or the build-push actions)
       # By default, the docker-container driver will be used to be able to
